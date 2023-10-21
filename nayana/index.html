@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Portpolio</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/9df8a166f2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+<div class="container">
+<nav>
+   <img src="download-tap.webp" class="logo">
+   <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#services">Project</a></li>
+      <li><a href="#portpolio">certificates</a></li>
+      <li><a href="#contact">contact me</a></li>
+   </ul>
+</nav>
+<div class="header-text">
+   <p>Full Stack web development</p>
+   <h1>Hi, I'm <span>Nayana M R</span></h1>
+</div>
+</div>
+   </div>
+   
+   <div id="about">
+      <div class="container">
+         <div class="row">
+            <div class="about-col-1">
+               <img src="download-tap.webp" >
+            </div>
+            <div class="about-col-2">
+               <h1 class="sub-title">About Me</h1>
+               <p>
+                  I am from Bagepalli, I have completed my Bachelor of Engineering in Electronics and communication
+                from SJC Institute of Technology, Chikaballapur with an aggregation of 8.85 CGPA. My Skills are C,
+                 Python and currentlynlearning Java full stack in Tap Academy. I am a good learner and team player. 
+                I am very good at handling a team. I am interested in browsing the internet and exploring and learing 
+                new things.
+               </p>
+               <div class="tab-titles active-tab">
+                  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                  <p class="tab-links" onclick="opentab('Education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                  <ul>
+                     <li>Java</li>
+                     <li>HTML</li>
+                     <li>CSS</li>
+                     <li>Python</li>
+                     <li>SQL</li>
+                     <li>C</li>
+                  </ul>
+               </div>
+               <div class="tab-contents" id="Education">
+                  <ul>
+                     <li><span>2017</span><br>class 10 in Adarsha Vidyalaya, Bagepalli</li>
+                     <li><span>2019</span><br>class 12 in Varadadri PU college, Bagepalli</li>
+                     <li><span>2023</span><br>BE in SJC Institute of Technology, Chickballapur</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="services">
+      <div class="container">
+         <h1 class="sub-title">Projects</h1>
+         <div class="project-list">
+            <div>
+               <h2>Automatic Vehicle Safety and Driver Assistance</h2><br>
+               <p>The main advantage of this project is to reduce the human death ratio. When the accident occurs, automatically the 
+                  kit is activated and through the raspberry pi camera the image is captured. Sends the sms to the registered mobile
+                  number and nearby police station and hospitals with the latitude and longitude position.
+               </p>
+            </div>
+            <br><br>
+            <div>
+               <h2>Monitoring the temperature and humidity using DHT11 sensor</h2><br>
+               <p>The main advantage of this project is to monitor the temperature and humidity in the surrounding environment and 
+                  stored in the web browser. The DHT11 sensor senses the surrounding temperature and humidity. This project is useful 
+                  for farmers based on the surrounding temperature they can grow suitable crops.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="portpolio">
+      <div class="container">
+         <h1 class="sub-title">certificates</h1>
+         <div class="work-list">
+            <div class="work">
+               <img src="certi-space.jpeg">
+            </div>
+            <div class="work">
+               <img src="certi-udemy.jpeg">
+            </div>
+            <div class="work">
+               <img src="certi-iot.jpeg">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="contact">
+      <div class="container">
+         <div class="row">
+            <div class="contact-left">
+               <h1 class="sub-title">Contact Me</h1>
+               <p><i class="fa-solid fa-paper-plane"></i> email@gmail.com</p>
+               <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+               <div class="social-icons">
+                  <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                  <a href=""><i class="fa-brands fa-whatsapp"></i></i></a>
+               </div>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+               <input type="text" name="Name" placeholder="Your Name" required>
+               <input type="email" name="email" placeholder="Youe email" required>
+               <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+               <button type="submit" class="btn btn2">Submit</button>
+            </form>
+         </div>
+      </div>
+   </div>
+   <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+      }
+   </script>
+</body>
+</html>
